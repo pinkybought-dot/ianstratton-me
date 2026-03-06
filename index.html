@@ -583,7 +583,10 @@
 
 <script>
 (function () {
-  var API_KEY   = 'AIzaSyAec5KF2FTrBGubbnoEGVaoTD71vZHf7c4'; // swap with Maps-enabled key
+  // TODO: Move API key to backend proxy. Exposed client-side keys are security risk.
+  // Use backend endpoint (e.g., /api/places) that fetches reviews server-side.
+  // See: https://github.com/pinkybought-dot/ianstratton-me/security/secret-scanning
+  var API_KEY   = '';
   var PLACE_ID  = 'ChIJacM_wKVBjoARPVCByhFyelE';
   var ENDPOINT  = 'https://places.googleapis.com/v1/places/' + PLACE_ID;
   var FIELDS    = 'reviews,rating,userRatingCount,displayName';
