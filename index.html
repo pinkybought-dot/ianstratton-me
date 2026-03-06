@@ -583,10 +583,10 @@
 
 <script>
 (function () {
-  // TODO: Move API key to backend proxy. Exposed client-side keys are security risk.
-  // Use backend endpoint (e.g., /api/places) that fetches reviews server-side.
-  // See: https://github.com/pinkybought-dot/ianstratton-me/security/secret-scanning
-  var API_KEY   = '';
+  // API key is restricted in Google Cloud Console to ianstratton.me domain only.
+  // See Application Restrictions in GCP Console for this key.
+  // Key can only be used from: https://ianstratton.me/*
+  var API_KEY   = 'AIzaSyCl5TRvPe0QIMAeOP6Vr5JUfxrzaofi9v4';
   var PLACE_ID  = 'ChIJacM_wKVBjoARPVCByhFyelE';
   var ENDPOINT  = 'https://places.googleapis.com/v1/places/' + PLACE_ID;
   var FIELDS    = 'reviews,rating,userRatingCount,displayName';
